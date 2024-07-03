@@ -1,0 +1,197 @@
+.home {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Police amusante pour les enfants */
+
+  
+  h2 {
+    font-size: 2.5rem;
+    color: #333;
+    
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+
+  .carousel {
+    margin-top: 40px;
+
+    .slick-slide img {
+      max-width: 70%; /* Ajustez cette valeur selon vos besoins */
+      height: auto;
+      margin: 0 auto; /* Centrer l'image horizontalement */
+      border-radius: 10px;
+    }
+  }
+
+  .attractions {
+    margin-top: 40px;
+    
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    .attraction-list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      
+      .attraction-item {
+        max-width: 200px;
+        text-align: center;
+        
+        img {
+          max-width: 100%;
+          border-radius: 10px;
+        }
+        
+        p {
+          margin-top: 10px;
+          color: #555;
+        }
+      }
+    }
+  }
+  
+  .info {
+    margin-top: 40px;
+    
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+  }
+}
+
+  
+.education {
+  margin-top: 40px;
+  
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    
+    .fact-item {
+      max-width: 300px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      
+      h4 {
+        font-size: 1.5rem;
+        color: #4CAF50;
+      }
+      
+      p {
+        margin-top: 10px;
+        color: #555;
+      }
+    }
+  }
+  
+  .resources {
+    margin-top: 40px;
+    
+    h4 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+      
+      li {
+        margin-bottom: 10px;
+        
+        a {
+          color: #4CAF50;
+          text-decoration: none;
+          font-size: 1.2rem;
+          
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.videos {
+  margin-top: 40px;
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .video-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .video-item {
+      max-width: 300px;
+
+      p {
+        margin-top: 10px;
+        color: #555;
+      }
+    }
+  }
+}
+
+.quiz {
+  margin-top: 40px;
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .quiz-question {
+    h4 {
+      font-size: 1.5rem;
+      color: #4CAF50;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: white;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #45A049;
+      }
+    }
+  }
+}
+
