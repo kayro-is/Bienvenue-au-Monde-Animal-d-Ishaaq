@@ -1,4 +1,5 @@
 .home {
+  background: linear-gradient(to right ,#0ca6b0,#ea8306 );
   text-align: center;
   padding: 20px;
   font-family: 'Comic Sans MS', cursive, sans-serif; /* Police amusante pour les enfants */
@@ -6,23 +7,33 @@
   
   h2 {
     font-size: 2.5rem;
-    color: #333;
+    color: white;
     
   }
 
   p {
     font-size: 1.2rem;
-    color: #666;
+    color: white;
   }
 
   .carousel {
     margin-top: 40px;
 
     .slick-slide img {
-      max-width: 70%; /* Ajustez cette valeur selon vos besoins */
+      max-width: 55%; 
       height: auto;
-      margin: 0 auto; /* Centrer l'image horizontalement */
+      margin: 0 auto; 
       border-radius: 10px;
+    }
+    .slick-prev, .slick-next {
+      width: 40%;
+      height: 50px;
+      z-index: 1;
+    }
+    
+    .slick-prev:before, .slick-next:before {
+      font-size: 50px;
+      color: white;
     }
   }
 
@@ -32,7 +43,7 @@
     h3 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #333;
+      color:white;
     }
     
     .attraction-list {
@@ -51,7 +62,7 @@
         
         p {
           margin-top: 10px;
-          color: #555;
+          color: white;
         }
       }
     }
@@ -63,12 +74,12 @@
     h3 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #333;
+      color: white;
     }
     
     p {
       font-size: 1.2rem;
-      color: #555;
+      color: white;
     }
   }
 }
@@ -80,7 +91,7 @@
   h3 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
+    color: white;
   }
   
   .facts {
@@ -114,7 +125,7 @@
     h4 {
       font-size: 1.8rem;
       margin-bottom: 20px;
-      color: #333;
+      color: white;
     }
     
     ul {
@@ -125,7 +136,7 @@
         margin-bottom: 10px;
         
         a {
-          color: #4CAF50;
+          color: white;
           text-decoration: none;
           font-size: 1.2rem;
           
@@ -140,11 +151,13 @@
 
 .videos {
   margin-top: 40px;
+  margin-bottom: 50px;
+
 
   h3 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
+    color: white;
   }
 
   .video-list {
@@ -153,11 +166,12 @@
     gap: 20px;
 
     .video-item {
-      max-width: 300px;
+      max-width: 600px;
+      
 
       p {
         margin-top: 10px;
-        color: #555;
+        color: white;
       }
     }
   }

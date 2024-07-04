@@ -1,10 +1,40 @@
-footer {
-  background-color: #282c34;
-  padding: 10px;
-  color: white;
+// src/components/Footer.scss
+.footer {
+  background-image: url(../../../public/ishaaq.webp);
+  background-size: cover;
+  color: #fff;
   text-align: center;
-  position: fixed;
-  width: 100%;
+  padding: 20px 0;
+  position: absolute;
   bottom: 0;
-  left: 0;
+  width: 100%;
+  margin-top: 20px auto;
+
+  .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      p {
+          margin: 0;
+      }
+
+      .footer-links {
+          display: flex;
+          gap: 20px;
+
+          a {
+              color: #fff;
+              text-decoration: none;
+              transition: color 0.3s;
+
+              &:hover {
+                  color: #ddd;
+              }
+          }
+      }
+  }
 }

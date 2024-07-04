@@ -1,12 +1,17 @@
+// src/components/Header/Header.jsx
 import React from 'react';
-import { motion } from 'framer-motion';
-import "./Header.scss"
+import './Header.scss';
 
 const Header = () => {
   return (
-    <motion.header initial={{ y: -250 }} animate={{ y: 0 }} transition={{ duration: 0.5 }}>
-      <h1>Monde Animal d'Ishaaq</h1>
-    </motion.header>
+    <header className="header">
+      <div className="header-container">
+        <div className="logo">
+          <img src="../../image/logo.webp" alt="Logo" />
+          <h1>Monde Animal d'Ishaaq</h1>
+        </div>
+      </div>
+    </header>
   );
 };
 
