@@ -1,24 +1,44 @@
+@import "../../App.scss";
+
 .navbar {
-    background-color: #ea8306;
-    padding: 10px;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    ul {
-      list-style-type: none;
-      margin: 0px 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-    li {
-      margin: 0 55px;
-      font-size: 20px;
-    }
-    a {
-      color: white;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
+  background-color: #ea8306;
+  padding: 10px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+
+  ul {
+    list-style-type: none;
+    margin: 0px 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
     }
   }
-  
+
+  li {
+    margin: 0 55px;
+    font-size: 20px;
+
+    @include mobile {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    @include tablet {
+      margin: 0 30px;
+      font-size: 18px;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,40 +1,61 @@
-// src/components/Footer.scss
-.footer {
-  background-image: url(../../../public/ishaaq.webp);
-  background-size: cover;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin-top: 20px auto;
+@import "../../App.scss";
 
-  .footer-content {
+.footer {
+    background: linear-gradient(to left, #0ca6b0, #ea8306);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  
+    @include mobile {
+      padding: 10px 0;
+    }
+  
+    .footer-content {
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 10px;
-
+  
+      @include mobile {
+        padding: 0 10px;
+        gap: 5px;
+      }
+  
       p {
-          margin: 0;
+        margin: 0;
+  
+        @include mobile {
+          font-size: 0.8rem;
+        }
+  
+        @include tablet {
+          font-size: 1rem;
+        }
       }
-
+  
       .footer-links {
-          display: flex;
-          gap: 20px;
-
-          a {
-              color: #fff;
-              text-decoration: none;
-              transition: color 0.3s;
-
-              &:hover {
-                  color: #ddd;
-              }
+        display: flex;
+        gap: 20px;
+  
+        @include mobile {
+          flex-direction: column;
+          gap: 10px;
+        }
+  
+        a {
+          color: #fff;
+          text-decoration: none;
+          transition: color 0.3s;
+  
+          &:hover {
+            color: #ddd;
           }
+        }
       }
+    }
   }
-}

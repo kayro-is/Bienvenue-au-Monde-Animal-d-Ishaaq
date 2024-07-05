@@ -7,7 +7,7 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <img src="../../image/logo.webp" alt="Logo" />
+          <img src="/logo.webp" alt="Logo" />
           <h1>Monde Animal d'Ishaaq</h1>
         </div>
       </div>

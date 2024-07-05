@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import './Jeux.scss';
 import HiddenAnimalGame from "./Jeux2";
 
 const animalHints = [
-  { hint: "Je suis le roi de la jungle", answer: "lion",image: "lion.jpg" },
+  { hint: "Je suis le roi de la jungle", answer: "lion", image: "lion.jpg" },
   { hint: "Je suis le plus grand mammifère terrestre", answer: "elephant" },
   { hint: "Je suis connu pour mon long cou", answer: "giraffe" },
   { hint: "Je suis un animal noir et blanc qui aime le bambou", answer: "panda" },
@@ -16,7 +17,7 @@ const animalHints = [
   { hint: "Je vis dans l'océan et j'ai huit bras", answer: "poulpe" },
   { hint: "Je suis un petit insecte rouge avec des points noirs", answer: "coccinelle" },
   { hint: "Je suis un grand reptile avec une peau écailleuse et des dents pointues", answer: "crocodile" },
-  { hint: "Je suis un insecte qui transforme en papillon", answer: "chenille" },
+  { hint: "Je suis un insecte qui se transforme en papillon", answer: "chenille" },
   { hint: "Je suis un animal qui a une carapace et peut vivre longtemps", answer: "tortue" },
   { hint: "Je suis connu pour mes grandes défenses en ivoire", answer: "mammouth" },
   { hint: "Je suis un poisson qui peut gonfler pour se protéger", answer: "poisson-globe" },
@@ -62,11 +63,11 @@ const GuessTheAnimal = () => {
     event.preventDefault();
     if (userGuess.toLowerCase() === animalHints[currentHintIndex].answer) {
       setScore(score + 1);
-      setFeedback("Bravo ! Bonne réponse.");
+      setFeedback("Bravo ! Bonne réponse 🎉.");
       setIsCorrect(true);
       setShowAnswer(false);
     } else {
-      setFeedback(`Oups ! Mauvaise réponse. La bonne réponse est: ${animalHints[currentHintIndex].answer}`);
+      setFeedback(`Oups ! Mauvaise réponse😔. La bonne réponse est: ${animalHints[currentHintIndex].answer}`);
       setIsCorrect(false);
       setShowAnswer(true);
     }
@@ -82,7 +83,14 @@ const GuessTheAnimal = () => {
     <div className="guess-the-animal">
       <h2>Devinez l'Animal</h2>
       <div className="score">Score: {score}</div>
-      <div className="hint">{animalHints[currentHintIndex].hint}</div>
+      <motion.div
+        className="hint"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        {animalHints[currentHintIndex].hint}
+      </motion.div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -93,17 +101,26 @@ const GuessTheAnimal = () => {
         <button type="submit">Devinez</button>
       </form>
       {feedback && (
-        <div className={`feedback ${isCorrect ? "correct" : "incorrect"}`}>
+        <motion.div
+          className={`feedback ${isCorrect ? "correct" : "incorrect"}`}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           {feedback}
-        </div>
+        </motion.div>
       )}
       {showAnswer && !isCorrect && (
-        <div className="correct-answer">
+        <motion.div
+          className="correct-answer"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           La bonne réponse était: {animalHints[currentHintIndex].answer}
-        </div>
+        </motion.div>
       )}
     </div>
-    
   );
   <HiddenAnimalGame />
 };

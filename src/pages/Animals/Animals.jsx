@@ -15,17 +15,17 @@ const Animals = () => {
     { name: 'Rhinocéros', description: 'Un grand mammifère herbivore avec une ou deux cornes sur le nez, souvent menacé par le braconnage.', image: '/rhinoceros.jpg' },
     { name: 'Kangourou', description: 'Un marsupial australien célèbre pour sa poche ventrale et ses puissants sauts.', image: '/kangaroo.jpg' },
     { name: 'Ours polaire', description: 'Un grand prédateur de l\'Arctique, connu pour son pelage blanc et sa capacité à nager sur de longues distances.', image: '/Ours_polaire.jpg' },
-    { name: 'Lémurien', description: 'Un primate endémique de Madagascar, célèbre pour ses grands yeux et ses comportements sociaux complexes.', image: '/images/lemur.jpg' },
-    { name: 'Hippopotame', description: 'Un grand mammifère semi-aquatique d\'Afrique, connu pour sa grande bouche et son comportement territorial.', image: '/images/hippopotamus.jpg' },
-    { name: 'Guépard', description: 'Le mammifère terrestre le plus rapide, capable d\'atteindre des vitesses de 100 km/h en courtes distances.', image: '/images/cheetah.jpg' },
-    { name: 'Flamant rose', description: 'Un oiseau aquatique connu pour sa couleur rose vibrante et ses longues pattes fines.', image: '/images/flamingo.jpg' },
-    { name: 'Loup', description: 'Un grand canidé sauvage, célèbre pour ses hurlements et sa vie en meute.', image: '/images/wolf.jpg' },
-    { name: 'Paon', description: 'Un oiseau célèbre pour ses plumes colorées et sa queue spectaculaire qu\'il déploie pour impressionner les femelles.', image: '/images/peacock.jpg' },
-    { name: 'Chameau', description: 'Un grand mammifère désertique connu pour ses bosses qui stockent la graisse et sa capacité à survivre dans des conditions arides.', image: '/images/camel.jpg' },
-    { name: 'Gorille', description: 'Le plus grand des primates, célèbre pour sa force, son intelligence et ses comportements sociaux complexes.', image: '/images/gorilla.jpg' },
-    { name: 'Loutre', description: 'Un petit mammifère semi-aquatique, connu pour son comportement joueur et sa capacité à utiliser des outils.', image: '/images/otter.jpg' },
-    { name: 'Ara', description: 'Un perroquet coloré et intelligent, souvent trouvé dans les forêts tropicales d\'Amérique du Sud.', image: '/images/macaw.jpg' },
-    { name: 'Serpent', description: 'Un reptile sans pattes, connu pour sa peau écailleuse et sa capacité à se glisser dans des espaces étroits.', image: '/images/snake.jpg' },
+    { name: 'Lémurien', description: 'Un primate endémique de Madagascar, célèbre pour ses grands yeux et ses comportements sociaux complexes.', image: '/Lémurien.jpg' },
+    { name: 'Hippopotame', description: 'Un grand mammifère semi-aquatique d\'Afrique, connu pour sa grande bouche et son comportement territorial.', image: '/hippopotame.jpg' },
+    { name: 'Guépard', description: 'Le mammifère terrestre le plus rapide, capable d\'atteindre des vitesses de 100 km/h en courtes distances.', image: '/Guépard.jpg' },
+    { name: 'Flamant rose', description: 'Un oiseau aquatique connu pour sa couleur rose vibrante et ses longues pattes fines.', image: '/Flamant rose.jpg' },
+    { name: 'Loup', description: 'Un grand canidé sauvage, célèbre pour ses hurlements et sa vie en meute.', image: '/Loup.jpg' },
+    { name: 'Paon', description: 'Un oiseau célèbre pour ses plumes colorées et sa queue spectaculaire qu\'il déploie pour impressionner les femelles.', image: '/Paon.jpg' },
+    { name: 'Chameau', description: 'Un grand mammifère désertique connu pour ses bosses qui stockent la graisse et sa capacité à survivre dans des conditions arides.', image: '/Chameau.jpg' },
+    { name: 'Gorille', description: 'Le plus grand des primates, célèbre pour sa force, son intelligence et ses comportements sociaux complexes.', image: '/Gorille.jpg' },
+    { name: 'Loutre', description: 'Un petit mammifère semi-aquatique, connu pour son comportement joueur et sa capacité à utiliser des outils.', image: '/Loutre.jpg' },
+    { name: 'Ara', description: 'Un perroquet coloré et intelligent, souvent trouvé dans les forêts tropicales d\'Amérique du Sud.', image: '/Ara.jpg' },
+    { name: 'Serpent', description: 'Un reptile sans pattes, connu pour sa peau écailleuse et sa capacité à se glisser dans des espaces étroits.', image: '/Serpent.jpg' },
     { name: 'Orang-outan', description: 'Un grand primate arboricole d\'Asie du Sud-Est, connu pour ses longs bras et son comportement intelligent.', image: '/images/orangutan.jpg' },
     { name: 'Hippocampe', description: 'Un petit poisson avec une tête en forme de cheval, connu pour sa capacité à se camoufler et à nager debout.', image: '/images/seahorse.jpg' },
     { name: 'Émeu', description: 'Un grand oiseau incapable de voler, natif d\'Australie, connu pour sa vitesse de course impressionnante.', image: '/images/emu.jpg' },
@@ -54,7 +54,7 @@ const Animals = () => {
 
   return (
     <div className="animals-page">
-      <h2>Our Animals</h2>
+      <h2>Liste des Animaux</h2>
       <div className="animal-grid">
         {animalData.map((animal, index) => (
           <AnimalCard key={index} animal={animal} />
