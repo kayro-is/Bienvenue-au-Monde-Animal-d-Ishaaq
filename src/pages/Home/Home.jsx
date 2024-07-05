@@ -1,13 +1,9 @@
-
-
 import { motion } from 'framer-motion';
 import Slider from 'react-slick';
-
 import './Home.scss';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Quiz from '../../components/quiz/Quiz';
-
 
 const Home = () => {
   const settings = {
@@ -30,6 +26,9 @@ const Home = () => {
       {/* Carrousel d'images */}
       <div className="carousel">
         <Slider {...settings}>
+          <div>
+            <img src="/ishaaqO.webp" alt="ishaaq" />
+          </div>
           <div>
             <img src="/lion.jpg" alt="Lion" />
           </div>
@@ -71,27 +70,33 @@ const Home = () => {
         </div>
       </div>
 
-       {/* Section des vidéos éducatives */}
-       <div className="videos">
+      {/* Section des vidéos éducatives */}
+      <div className="videos">
         <h3>Vidéos éducatives</h3>
         <div className="video-list">
           <div className="video-item">
-            <iframe width="300" height="200" src="/lion.mp4" title="Vidéo éducative 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <video width="500" height="400" controls>
+              <source src="/lion.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la balise vidéo.
+            </video>
             <p>Découvrez le comportement des lions dans la savane.</p>
           </div>
           <div className="video-item">
-            <iframe width="300" height="200" src="/elephant.mp4" title="Vidéo éducative 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <video width="500" height="400" controls>
+              <source src="/elephant.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la balise vidéo.
+            </video>
             <p>La preuve de l'intelligence des éléphants.</p>
           </div>
           <div className="video-item">
-            <iframe width="300" height="200" src="/tigre.mp4" title="Vidéo éducative 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-            <p>La vie des girafes dans la savane africaine.</p>
+            <video width="500" height="400" controls>
+              <source src="/tigre.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la balise vidéo.
+            </video>
+            <p>Un grand félin carnivore, célèbre pour ses rayures oranges et noires.</p>
           </div>
         </div>
       </div>
-
-      {/* Section du quiz interactif */}
-    
     </motion.div>
   );
 };

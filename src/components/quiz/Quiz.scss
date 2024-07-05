@@ -1,72 +1,162 @@
+@import "../../App.scss";
+
 .quiz {
-    text-align: center;
-    margin-top: 40px;
-  
-    .question-section {
-      margin-bottom: 20px;
-  
-      .question-count {
-        margin-bottom: 10px;
-        font-size: 1.2rem;
-        color: #333;
-      }
-  
-      .question-text {
-        font-size: 1.5rem;
-        color: #4CAF50;
-      }
-    }
-  
-    .answer-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  
-      button {
-        margin: 5px;
-        padding: 10px 20px;
-        font-size: 1rem;
-        color: white;
-        background-color: #4CAF50;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-  
-        &.selected {
-          background-color: #45A049;
-        }
-  
-        &:hover {
-          background-color: #45A049;
-        }
-      }
-    }
-  
-    .next-button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 1rem;
+  text-align: center;
+  margin-top: 40px;
+  color: #333;
+  padding: 20px;
+  background: linear-gradient(to left, #0ca6b0, #ea8306);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  @include mobile {
+    padding: 10px;
+  }
+
+  .question-section {
+    margin-bottom: 20px;
+
+    .question-count {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
       color: white;
-      background-color: #4CAF50;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-  
-      &:disabled {
-        background-color: #ccc;
-        cursor: not-allowed;
+
+      @include mobile {
+        font-size: 1rem;
       }
-  
-      &:hover:enabled {
-        background-color: #45A049;
+
+      @include tablet {
+        font-size: 1.1rem;
       }
     }
-  
-    .score-section {
-      font-size: 1.5rem;
-      color: #333;
+
+    .question-text {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 20px;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+
+      @include tablet {
+        font-size: 1.6rem;
+      }
     }
   }
-  
+
+  .answer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    .option-button {
+      margin: 10px 0;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      color: white;
+      background-color: #0ca6b0;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+      @include mobile {
+        padding: 10px 20px;
+        font-size: 1rem;
+      }
+
+      @include tablet {
+        padding: 12px 25px;
+        font-size: 1.05rem;
+      }
+
+      &.correct {
+        background-color: #4CAF50;
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      &.incorrect {
+        background-color: #F44336;
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      &:hover {
+        background-color: #ea8306;
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .next-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #2196F3;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+    @include mobile {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+
+    @include tablet {
+      padding: 12px 25px;
+      font-size: 1.05rem;
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    &:hover:enabled {
+      background-color: #1976D2;
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .score-section {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4CAF50;
+
+    @include mobile {
+      font-size: 1.5rem;
+    }
+
+    @include tablet {
+      font-size: 1.6rem;
+    }
+  }
+
+  .loading {
+    font-size: 1.8rem;
+    color: #4CAF50;
+
+    @include mobile {
+      font-size: 1.5rem;
+    }
+
+    @include tablet {
+      font-size: 1.6rem;
+    }
+  }
+}

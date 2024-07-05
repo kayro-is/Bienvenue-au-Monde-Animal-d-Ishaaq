@@ -164,8 +164,7 @@ const questions = [
 { question: "Quel est le plus grand oiseau de proie ?", options: ["Condor", "Aigle", "Faucon"], answer: "Condor" }
 ];
 
-// Fonction pour mélanger les questions
-// Fonction pour mélanger les questions
+
 const shuffleArray = (array) => {
   return array.sort(() => Math.random() - 0.5);
 };
@@ -179,6 +178,7 @@ const Quiz = () => {
   const [showScore, setShowScore] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const [quizQuestions, setQuizQuestions] = useState([]);
+  const [answerStatus, setAnswerStatus] = useState(null);
 
   useEffect(() => {
     // Mélanger les questions et sélectionner les premières 'numberOfQuestions' questions
@@ -188,10 +188,11 @@ const Quiz = () => {
 
   const handleAnswerOptionClick = (option) => {
     setSelectedOption(option);
+    setAnswerStatus(option === quizQuestions[currentQuestion].answer ? 'correct' : 'incorrect');
   };
 
   const handleNextQuestion = () => {
-    if (selectedOption === quizQuestions[currentQuestion].answer) {
+    if (answerStatus === 'correct') {
       setScore(score + 1);
     }
 
@@ -199,6 +200,7 @@ const Quiz = () => {
     if (nextQuestion < quizQuestions.length) {
       setCurrentQuestion(nextQuestion);
       setSelectedOption(null);
+      setAnswerStatus(null);
     } else {
       setShowScore(true);
     }
@@ -228,13 +230,14 @@ const Quiz = () => {
               <button
                 key={option}
                 onClick={() => handleAnswerOptionClick(option)}
-                className={selectedOption === option ? "selected" : ""}
+                className={`option-button ${selectedOption === option ? (answerStatus === 'correct' ? 'correct' : 'incorrect') : ''}`}
+                disabled={selectedOption !== null}
               >
                 {option}
               </button>
             ))}
           </div>
-          <button className="next-button" onClick={handleNextQuestion} disabled={!selectedOption}>
+          <button className="next-button" onClick={handleNextQuestion} disabled={selectedOption === null}>
             Suivant
           </button>
         </>

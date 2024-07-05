@@ -1,134 +1,267 @@
+@import "../../App.scss";
+
 .home {
+  background: linear-gradient(to right, #0ca6b0, #ea8306);
   text-align: center;
   padding: 20px;
   font-family: 'Comic Sans MS', cursive, sans-serif; /* Police amusante pour les enfants */
 
-  
+  @include mobile {
+    padding: 10px;
+  }
+
   h2 {
     font-size: 2.5rem;
-    color: #333;
-    
+    color: white;
+
+    @include mobile {
+      font-size: 2rem;
+    }
+
+    @include tablet {
+      font-size: 2.2rem;
+    }
   }
 
   p {
     font-size: 1.2rem;
-    color: #666;
+    color: white;
+
+    @include mobile {
+      font-size: 1rem;
+    }
+
+    @include tablet {
+      font-size: 1.1rem;
+    }
   }
 
   .carousel {
     margin-top: 40px;
 
+    @include mobile {
+      margin-top: 20px;
+    }
+
     .slick-slide img {
-      max-width: 70%; /* Ajustez cette valeur selon vos besoins */
+      max-width: 55%;
       height: auto;
-      margin: 0 auto; /* Centrer l'image horizontalement */
+      margin: 0 auto;
       border-radius: 10px;
+
+      @include mobile {
+        max-width: 80%;
+      }
+    }
+
+    .slick-prev,
+    .slick-next {
+      width: 40%;
+      height: 50px;
+      z-index: 1;
+
+      @include mobile {
+        width: 30%;
+      }
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      font-size: 50px;
+      color: white;
+
+      @include mobile {
+        font-size: 30px;
+      }
     }
   }
 
   .attractions {
     margin-top: 40px;
-    
+
+    @include mobile {
+      margin-top: 20px;
+    }
+
     h3 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #333;
+      color: white;
+
+      @include mobile {
+        font-size: 1.8rem;
+      }
+
+      @include tablet {
+        font-size: 1.9rem;
+      }
     }
-    
+
     .attraction-list {
       display: flex;
       justify-content: center;
       gap: 20px;
-      
+
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
       .attraction-item {
         max-width: 200px;
         text-align: center;
-        
+
+        @include mobile {
+          max-width: 100%;
+        }
+
         img {
           max-width: 100%;
           border-radius: 10px;
         }
-        
+
         p {
           margin-top: 10px;
-          color: #555;
+          color: white;
         }
       }
     }
   }
-  
+
   .info {
     margin-top: 40px;
-    
+
+    @include mobile {
+      margin-top: 20px;
+    }
+
     h3 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #333;
+      color: white;
+
+      @include mobile {
+        font-size: 1.8rem;
+      }
+
+      @include tablet {
+        font-size: 1.9rem;
+      }
     }
-    
+
     p {
       font-size: 1.2rem;
-      color: #555;
+      color: white;
+
+      @include mobile {
+        font-size: 1rem;
+      }
+
+      @include tablet {
+        font-size: 1.1rem;
+      }
     }
   }
 }
 
-  
 .education {
   margin-top: 40px;
-  
+
+  @include mobile {
+    margin-top: 20px;
+  }
+
   h3 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
+    color: white;
+
+    @include mobile {
+      font-size: 1.8rem;
+    }
+
+    @include tablet {
+      font-size: 1.9rem;
+    }
   }
-  
+
   .facts {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
     .fact-item {
       max-width: 300px;
       background-color: #f9f9f9;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      
+
+      @include mobile {
+        max-width: 90%;
+      }
+
       h4 {
         font-size: 1.5rem;
         color: #4CAF50;
       }
-      
+
       p {
         margin-top: 10px;
         color: #555;
       }
     }
   }
-  
+
   .resources {
     margin-top: 40px;
-    
+
+    @include mobile {
+      margin-top: 20px;
+    }
+
     h4 {
       font-size: 1.8rem;
       margin-bottom: 20px;
-      color: #333;
+      color: white;
+
+      @include mobile {
+        font-size: 1.6rem;
+      }
+
+      @include tablet {
+        font-size: 1.7rem;
+      }
     }
-    
+
     ul {
       list-style-type: none;
       padding: 0;
-      
+
       li {
         margin-bottom: 10px;
-        
+
         a {
-          color: #4CAF50;
+          color: white;
           text-decoration: none;
           font-size: 1.2rem;
-          
+
+          @include mobile {
+            font-size: 1rem;
+          }
+
+          @include tablet {
+            font-size: 1.1rem;
+          }
+
           &:hover {
             text-decoration: underline;
           }
@@ -140,11 +273,25 @@
 
 .videos {
   margin-top: 40px;
+  margin-bottom: 50px;
+
+  @include mobile {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
 
   h3 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
+    color: white;
+
+    @include mobile {
+      font-size: 1.8rem;
+    }
+
+    @include tablet {
+      font-size: 1.9rem;
+    }
   }
 
   .video-list {
@@ -152,12 +299,39 @@
     justify-content: center;
     gap: 20px;
 
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
     .video-item {
-      max-width: 300px;
+      max-width: 600px;
+
+      @include mobile {
+        max-width: 100%;
+      }
+
+      @include tablet {
+        max-width: 80%;
+      }
+
+      video {
+        width: 100%;
+        height: auto;
+
+        @include mobile {
+          height: auto;
+        }
+
+        @include tablet {
+          height: auto;
+        }
+      }
 
       p {
         margin-top: 10px;
-        color: #555;
+        color: white;
       }
     }
   }
@@ -166,16 +340,36 @@
 .quiz {
   margin-top: 40px;
 
+  @include mobile {
+    margin-top: 20px;
+  }
+
   h3 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #333;
+
+    @include mobile {
+      font-size: 1.8rem;
+    }
+
+    @include tablet {
+      font-size: 1.9rem;
+    }
   }
 
   .quiz-question {
     h4 {
       font-size: 1.5rem;
       color: #4CAF50;
+
+      @include mobile {
+        font-size: 1.3rem;
+      }
+
+      @include tablet {
+        font-size: 1.4rem;
+      }
     }
 
     button {
@@ -188,10 +382,19 @@
       border-radius: 5px;
       cursor: pointer;
 
+      @include mobile {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+
+      @include tablet {
+        padding: 9px 18px;
+        font-size: 0.95rem;
+      }
+
       &:hover {
         background-color: #45A049;
       }
     }
   }
 }
-

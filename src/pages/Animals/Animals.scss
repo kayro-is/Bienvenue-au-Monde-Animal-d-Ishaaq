@@ -1,11 +1,26 @@
+@import "../../App.scss";
+
 .animals-page {
   text-align: center;
   padding: 20px;
-  
+
+  @include mobile {
+    padding: 10px;
+    margin: auto;
+  }
+
   h2 {
     margin-bottom: 20px;
-    font-size: 2rem;
-    color: #333;
+    font-size: 3rem;
+    color: #ffff;
+
+    @include mobile {
+      font-size: 1.5rem;
+    }
+
+    @include tablet {
+      font-size: 1.8rem;
+    }
   }
 
   .animal-grid {
@@ -13,6 +28,10 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+
+    @include mobile {
+      gap: 10px;
+    }
   }
 
   .animal-card {
@@ -25,6 +44,12 @@
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
+    @include mobile {
+      max-width: 100%;
+      padding: 10px;
+      margin: 10px;
+    }
+
     &:hover {
       transform: scale(1.05);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -35,17 +60,37 @@
       border-radius: 8px;
       height: auto;
       object-fit: cover;
+
+      @include mobile {
+        max-width: 100%;
+      }
     }
 
     h2 {
       margin: 10px 0;
       font-size: 1.5rem;
       color: #333;
+
+      @include mobile {
+        font-size: 1.2rem;
+      }
+
+      @include tablet {
+        font-size: 1.4rem;
+      }
     }
 
     p {
       color: #666;
       font-size: 1rem;
+
+      @include mobile {
+        font-size: 0.9rem;
+      }
+
+      @include tablet {
+        font-size: 0.95rem;
+      }
     }
   }
 }

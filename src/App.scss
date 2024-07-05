@@ -5,3 +5,34 @@
   padding-bottom: 50px; // Hauteur du footer
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to left, #0ca6b0, #ea8306);
+  background-size: cover;  // Ajuste la taille de l'image de fond
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+#root {
+  height: 100%;
+}
+
+@mixin mobile{
+  @media (max-width: 738px){
+      @content;
+  }
+}
+
+@mixin tablet{
+  @media (max-width: 1024px){
+      @content;
+  }
+}
+
+@mixin desktop{
+  @media (min-width: 1366px){
+      @content;
+  }
+}

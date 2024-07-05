@@ -6,9 +6,10 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Animals from './pages/Animals/Animals';
 import './App.scss';
-import ZooMap from './components/ZooMap/ZooMap';
 import Navbar from './components/NavBar/NavBar';
 import Contact from './pages/Contact/Contact';
+import GameSelector from './components/GameSelector/GameSelector';
+
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/animals" element={<Animals />} />
-          <Route path="/zoomap" element={<ZooMap />} />
+          <Route path="/jeux" element={<GameSelector />} />
           <Route path="/contact" element={<Contact/>} />
         </Routes>
         <Footer />
