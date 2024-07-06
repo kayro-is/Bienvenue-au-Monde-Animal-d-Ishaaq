@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import './Jeux.scss';
-import HiddenAnimalGame from "./Jeux2";
+
 
 const animalHints = [
   { hint: "Je suis le roi de la jungle", answer: "lion", image: "lion.jpg" },
@@ -122,7 +122,14 @@ const GuessTheAnimal = () => {
       )}
     </div>
   );
-  <HiddenAnimalGame />
 };
 
-export default GuessTheAnimal;
+const Games = () => {
+  return (
+    <div>
+      <GuessTheAnimal />
+    </div>
+  );
+};
+
+export default Games;

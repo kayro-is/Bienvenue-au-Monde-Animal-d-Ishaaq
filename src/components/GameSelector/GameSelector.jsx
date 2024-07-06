@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Jeux from "./jeux/Jeux";
-import Jeux2 from "./jeux/Jeux2";
 import "./GameSelector.scss";
 
 const GameSelector = () => {
@@ -43,7 +42,7 @@ const GameSelector = () => {
               transition={{ duration: 0.5 }}
               className="game-content"
             >
-              <Jeux2 />
+              
             </motion.div>
           )}
         </AnimatePresence>

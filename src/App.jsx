@@ -8,7 +8,7 @@ import Animals from './pages/Animals/Animals';
 import './App.scss';
 import Navbar from './components/NavBar/NavBar';
 import Contact from './pages/Contact/Contact';
-import GameSelector from './components/GameSelector/GameSelector';
+import Games from './components/GameSelector/jeux/Jeux';
 
 
 
@@ -22,7 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/animals" element={<Animals />} />
-          <Route path="/jeux" element={<GameSelector />} />
+          <Route path="/jeux" element={<Games />} />
           <Route path="/contact" element={<Contact/>} />
         </Routes>
         <Footer />
