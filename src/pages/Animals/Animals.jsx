@@ -245,70 +245,44 @@ const Animals = () => {
       description: 'Un gracieux herbivore des savanes africaines, connu pour sa rapidité et ses sauts agiles. Les gazelles vivent en troupeaux et sont des proies communes pour les grands prédateurs.',
       habitat: 'Savane et prairies africaines.',
       facts: 'Les gazelles peuvent atteindre des vitesses de 80 km/h en courant.',
-      image: '/images/gazelle.jpg'
+      image: '/gazelle.jpg'
     },
     {
       name: 'Iguane',
       description: 'Un grand lézard herbivore d\'Amérique centrale et du Sud, célèbre pour ses écailles vertes et sa crête dorsale. Les iguanes sont des animaux diurnes.',
       habitat: 'Forêts tropicales et zones arides d\'Amérique centrale et du Sud.',
       facts: 'Les iguanes peuvent détacher leur queue pour échapper aux prédateurs.',
-      image: '/images/iguana.jpg'
+      image: '/iguana.jpg'
     },
-    {
-      name: 'Loriquet',
-      description: 'Un petit perroquet coloré d\'Australie et des îles environnantes, connu pour son alimentation à base de nectar. Les loriquets sont très sociaux et vivent en groupes.',
-      habitat: 'Forêts tropicales et subtropicales d\'Australie et des îles environnantes.',
-      facts: 'Les loriquets utilisent leur langue brossée pour récolter le nectar des fleurs.',
-      image: '/images/lory.jpg'
-    },
+ 
     {
       name: 'Manchot',
       description: 'Un oiseau aquatique de l\'hémisphère sud, adapté à la vie dans les eaux glaciales de l\'Antarctique. Les manchots sont d\'excellents nageurs.',
       habitat: 'Régions antarctiques et subantarctiques.',
       facts: 'Les manchots empereurs peuvent plonger à des profondeurs de plus de 500 mètres.',
-      image: '/images/penguin2.jpg'
+      image: '/Manchot.jpg'
     },
-    {
-      name: 'Narval',
-      description: 'Un cétacé de l\'Arctique, surnommé la "licorne des mers" en raison de sa longue défense torsadée. Les narvals utilisent leur défense pour se battre et sonder la glace.',
-      habitat: 'Océans arctiques.',
-      facts: 'La défense du narval est en fait une longue dent qui peut atteindre jusqu\'à 3 mètres de long.',
-      image: '/images/narwhal.jpg'
-    },
-    {
-      name: 'Ocelot',
-      description: 'Un félin tacheté des forêts tropicales d\'Amérique centrale et du Sud, connu pour ses compétences de grimpeur. Les ocelots sont solitaires et nocturnes.',
-      habitat: 'Forêts tropicales et subtropicales d\'Amérique centrale et du Sud.',
-      facts: 'Les ocelots ont un excellent sens de la vue et de l\'ouïe, ce qui en fait des chasseurs efficaces.',
-      image: '/images/ocelot.jpg'
-    },
-    {
-      name: 'Pangolin',
-      description: 'Un mammifère couvert d\'écailles, connu pour se rouler en boule pour se protéger et son régime alimentaire à base de fourmis. Les pangolins sont les seuls mammifères entièrement couverts d\'écailles.',
-      habitat: 'Forêts tropicales et savanes d\'Afrique et d\'Asie.',
-      facts: 'Les pangolins peuvent consommer jusqu\'à 70 millions de fourmis par an.',
-      image: '/images/pangolin.jpg'
-    },
+ 
     {
       name: 'Tapir',
       description: 'Un grand herbivore au nez préhensile, trouvé dans les forêts tropicales d\'Amérique du Sud et d\'Asie du Sud-Est. Les tapirs sont excellents nageurs et passent beaucoup de temps dans l\'eau.',
       habitat: 'Forêts tropicales d\'Amérique du Sud et d\'Asie du Sud-Est.',
       facts: 'Les tapirs utilisent leur nez pour attraper les feuilles et les fruits.',
-      image: '/images/tapir.jpg'
+      image: '/tapir.jpg'
     },
     {
       name: 'Morse',
       description: 'Un grand mammifère marin de l\'Arctique, reconnaissable par ses longues défenses et ses moustaches. Les morses utilisent leurs défenses pour se hisser sur la glace.',
       habitat: 'Régions arctiques.',
       facts: 'Les morses peuvent plonger à des profondeurs de plus de 100 mètres à la recherche de nourriture.',
-      image: '/images/morse.jpg'
+      image: '/morse.jpg'
     },
     {
       name: 'Mandrill',
       description: 'Un primate coloré de la famille des babouins, connu pour son visage coloré et ses comportements sociaux. Les mandrills vivent en groupes appelés "hordes".',
       habitat: 'Forêts tropicales d\'Afrique centrale.',
       facts: 'Les mandrills mâles ont un visage multicolore unique, avec des nuances de bleu et de rouge.',
-      image: '/images/mandrill.jpg'
+      image: '/mandrill.jpg'
     }
   ];
 
